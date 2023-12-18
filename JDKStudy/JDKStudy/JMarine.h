@@ -11,8 +11,10 @@ class JMarine : public IExecute
 
 public:
 	JMarine();
+	JMarine(const JMarine& Copy);
 	JMarine(int x, int y);
 	JMarine(int x, int y, const char* marine_name);
+	~JMarine();
 
 	int Attack();
 	void Be_Attacked(int damage_earn);
