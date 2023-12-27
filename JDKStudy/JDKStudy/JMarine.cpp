@@ -124,4 +124,7 @@ void JMarine::Execute()
     Marine1.Show_Status();
     Marine2.Show_Status();
     Marine3.Show_Status();
+
+    //Make My String
+
 }

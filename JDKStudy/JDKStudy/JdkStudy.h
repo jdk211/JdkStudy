@@ -6,6 +6,7 @@
 #include "JDate.h"
 #include "JGeometry.h"
 #include "JMarine.h"
+#include "JString.h"
 
 //using namespace std; 
 //이름이 겹치는 함수를 만들 수 있기 때문에 권장하지 않음 
@@ -49,8 +50,29 @@ int main()
 	//Geo.Execute();
 
 	//5-1
-	JMarine Marine;
-	Marine.Execute();
+	//JMarine Marine;
+	//Marine.Execute();
+
+	//5-1 Make String
+	/*JString StringTest1 = JString('j', 5);
+	StringTest1.PrintStr();
+	
+	JString StringTest2 = JString(StringTest1);
+	StringTest2.PrintStr();
+
+	char* str = new char[7 + 1];
+	strcpy_s(str, 7 + 1, "JString");
+	JString StringTest3 = JString(str);
+	StringTest3.PrintStr();
+	delete[] str;
+
+	StringTest1.add_string(StringTest3);
+	StringTest1.PrintStr();
+
+	StringTest2.copy_string(StringTest1);
+	StringTest2.PrintStr();*/
+
+
 
 	return 0;
 }
