@@ -7,6 +7,7 @@
 #include "JGeometry.h"
 #include "JMarine.h"
 #include "JString.h"
+#include "MyString.h"
 
 //using namespace std; 
 //이름이 겹치는 함수를 만들 수 있기 때문에 권장하지 않음 
@@ -24,9 +25,10 @@ namespace {
 
 int main()
 {
-	std::cout << "hello, World" << std::endl;
-	NsTest1::foo();
-	OnlyThisFile();
+	//namespace 
+	//std::cout << "hello, World" << std::endl;
+	//NsTest1::foo();
+	//OnlyThisFile();
 		
 	//레퍼런스 연습
 	//JRef ref;
@@ -49,11 +51,11 @@ int main()
 	//JGeometry Geo = JGeometry();
 	//Geo.Execute();
 
-	//5-1
+	//4-3
 	//JMarine Marine;
 	//Marine.Execute();
 
-	//5-1 Make String
+	//4-3 Make String
 	/*JString StringTest1 = JString('j', 5);
 	StringTest1.PrintStr();
 	
@@ -72,7 +74,25 @@ int main()
 	StringTest2.copy_string(StringTest1);
 	StringTest2.PrintStr();*/
 
+	/*4-4*/
+	/*JMarine Marine;
+	Marine.Execute();*/
 
+	/*4-5*/
+	MyString Str("Hello World");
+	std::cout << "MyString Lenght : " << Str.Length() << std::endl;
+	Str.Print();
+	MyString Str1("LongLongLongLong");
+	Str1.assign("short");
+	Str1.Print();
+	MyString Str2("Long Long Long String");
+	Str2.reserve(30);
+
+	std::cout << "Capacity : " << Str2.capacity() << std::endl;
+	std::cout << "String Length : " << Str2.Length() << std::endl;
+	
+	char StrAt = Str2.at(2);
+	std::cout << "At : " << StrAt << std::endl;
 
 	return 0;
 }
